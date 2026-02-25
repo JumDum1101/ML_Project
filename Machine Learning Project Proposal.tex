@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{booktabs} 
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage[margin=1in]{geometry}  % nice margins
+\usepackage{setspace}              % control line spacing
+\usepackage{hyperref}              % nicer links
+\setlength{\parindent}{0pt}        % no paragraph indent
+\setlength{\parskip}{0.75em}       % space between paragraphs
+\usepackage[margin=1in]{geometry}
+
+
+% Will declare authors below
+\title{Machine Learning Project Proposal}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Team Information}
+
+	\hspace*{\parindent}\textbf{All members:}  Archi Mehta, Kareena Raghubans, Ramyanaga Nagarur, 
+Sparsh Pandey, Vasupradha Ramji\\
+
+	\textbf{Project Coordinator:} Sparsh Pandey\\
+	
+
+\section*{Dataset Selected}
+
+\hspace*{\parindent}We will use the  \textbf{Covertype} dataset. This dataset can be found in UC Irvine's dataset repository. It contains 581,012 instances, 54 features, and 7 labels. \\
+
+
+This dataset is:  
+https://archive.ics.uci.edu/dataset/31/covertype \\
+
+\section*{Methods to Implement}
+\subsection*{Decision Tree}
+
+f1-score, calculate with beta being 2 and 1/2
+
+test, train, val accuracy
+
+t-score
+
+ROC and AUC
+
+Odd ratio
+
+precision and recall
+\pagebreak
+
+\section*{Basic Statistics of the Dataset}
+
+{\small
+\input{table_basic_stats_all.tex}
+}
+
+The table above presents the descriptive statistics for all 55 features in the Forest CoverType dataset. For each feature, the table reports the number of observations, mean, standard deviation, minimum value, and key quartiles (25, 50, and 75), as well as the maximum observed value. These summaries show the wide variation in terrain-related features such as elevation, slope, hydrology distances, and hillshade indices, as well as the sparsity of many binary wilderness and soil-type indicators. Together, these statistics provide an overview of the distribution and scale of each variable.
+
+\end{document}
