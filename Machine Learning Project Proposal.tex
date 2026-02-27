@@ -20,44 +20,63 @@
 
 \maketitle
 
-\section*{Team Information}
+\section{Team Information}
 
 	\hspace*{\parindent}\textbf{All members:}  Archi Mehta, Kareena Raghubans, Ramyanaga Nagarur, 
-Sparsh Pandey, Vasupradha Ramji\\
+Vasupradha Ramji, Sparsh Pandey
 
-	\textbf{Project Coordinator:} Sparsh Pandey\\
+	\textbf{Project Coordinator:} Sparsh Pandey
 	
 
-\section*{Dataset Selected}
+\section{Dataset Selected}
 
-\hspace*{\parindent}We will use the  \textbf{Covertype} dataset. This dataset can be found in UC Irvine's dataset repository. It contains 581,012 instances, 54 features, and 7 labels. \\
+\hspace*{\parindent}We will use the  \textbf{Covertype} dataset. This dataset can be found in UC Irvine's dataset repository. It contains 581,012 instances, 54 features, and 7 labels. Here is a link to the dataset: https://archive.ics.uci.edu/dataset/31/covertype \\
 
+This dataset does NOT contain images. Instead, each instance describes a 30 x 30 meter cell with different feature such as elevation, soil type, etc. The labels are the specific type of tree each instance describes (such as Spruce, Cottonwood, Aspen, etc). 
 
-This dataset is:  
-https://archive.ics.uci.edu/dataset/31/covertype \\
+\section{Basic Statistics of the Dataset}
 
-\section*{Methods to Implement}
-\subsection*{Decision Tree}
+The table below presents the descriptive statistics for all 55 features in the Forest CoverType dataset. For each feature, the table reports the number of observations, mean, standard deviation, minimum value, key quartiles (25, 50, and 75), as well as the maximum observed value. These summaries show the wide variation in terrain-related features such as elevation, slope, hydrology distances, and hillshade indices, as well as the sparsity of many binary wilderness and soil-type indicators. Together, these statistics provide an overview of the distribution and scale of each variable.
 
-f1-score, calculate with beta being 2 and 1/2
+The creator of the dataset also states that out of the 4 areas sampled, area 2, Neota, had a greater mean elevation compared to areas 1 and 3, Rawah and Comanche Peak respectively. Area 4, Cache la Poudre, had the lowest mean elevation.
 
-test, train, val accuracy
+Each area also has a majority population. Neota is more likely to have spruce/fir, Rawah and Comanche Park have more lodgepole pine, spruce/fir, and aspen (in that order from highest to lowest). Finally, Cache la Poudre contains Ponderosa pine, Douglas-fir, and cottonwood/willow
 
-t-score
-
-ROC and AUC
-
-Odd ratio
-
-precision and recall
 \pagebreak
-
-\section*{Basic Statistics of the Dataset}
 
 {\small
 \input{table_basic_stats_all.tex}
 }
 
-The table above presents the descriptive statistics for all 55 features in the Forest CoverType dataset. For each feature, the table reports the number of observations, mean, standard deviation, minimum value, and key quartiles (25, 50, and 75), as well as the maximum observed value. These summaries show the wide variation in terrain-related features such as elevation, slope, hydrology distances, and hillshade indices, as well as the sparsity of many binary wilderness and soil-type indicators. Together, these statistics provide an overview of the distribution and scale of each variable.
+\section{Methods to Implement}
+
+\begin{itemize}
+	\item Decision Tree: Ramyanaga Nagarur 
+	\item Naive Bayes Classifier: Vasupradha Ramji
+	\item Logistic Regression: Kareena Raghubans
+	\item Linear Support Vector Machine: Archi Mehta
+	\item Kernel Support Vector Machine: Sparsh Pandey
+	\item Multi-layer Perceptrons: Ramyanaga Nagarur 
+	\item Convolutional Neural Networks (CNN): Vasupradha Ramji
+	\item Long Short-Term Memory Networks (LSTM): Archi Mehta
+	\item Transformers: Sparsh Pandey
+	\item Large Language Models (Decoder-only): Kareena Raghubans
+
+\end{itemize}
+\section{Evaluation}
+
+For evaluation, we will use the following:
+
+\begin{itemize}
+	\item test, train, val accuracy
+	\item precision and recall
+	\item f1-score
+	\item ROC and AUC curves
+	\item t-score
+	\item Odd ratio
+\end{itemize}
+
+\section{Timeline}
+
 
 \end{document}
