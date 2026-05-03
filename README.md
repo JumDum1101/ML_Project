@@ -47,6 +47,42 @@ Outputs:
 - Confusion matrix
 - Comparison of standard vs balanced model performance
 
+### Gaussian Naive Bayes
+How to Run:
+1. Open the Gaussian Naive Bayes notebook in Jupyter Notebook or VS Code.
+2. Ensure the required libraries are installed:
+- numpy
+- pandas
+- matplotlib
+- scikit-learn
+- Ucimlrepo
+3. Run all cells from top to bottom.
+4. The dataset is loaded directly from the UCI repository using fetch_ucirepo.
+  
+What the Notebook Does:
+- Imports required libraries.
+- Loads the Covertype dataset using ucimlrepo.
+- Converts the target labels into a usable one-dimensional format.
+- Selects the 10 continuous terrain-related features
+- Shows class distribution using a bar chart.
+- Splits the dataset into train/validation/test sets: 70% training, 10% validation, 20% testing
+- Uses stratified splitting to preserve class proportions.
+- Applies PowerTransformer with the Yeo-Johnson method to make continuous features more Gaussian-like.
+- Trains a Gaussian Naive Bayes model.
+- Tunes the var_smoothing hyperparameter using np.logspace(-12, 1, 20)
+- Selects the best model based on validation macro F1-score.
+- Evaluates the model on validation and test data.
+- Generates visualizations and evaluation metrics
+
+Output:
+- Validation accuracy
+- Test accuracy
+- Precision, recall, and F1-score
+- Log loss
+- Confusion matrix
+- Hyperparameter tuning plot for var_smoothing
+
+
 ## Deep Learning Models
 ### Multi-Layer Perceptrons
 How to Run
@@ -69,6 +105,48 @@ Outputs
 
 Note
 - A convergence warning may appear during training; this is expected and does not affect final results.
+
+### Convolutional Neural Network
+How to Run:
+1. Open the CNN notebook in Jupyter Notebook or VS Code.
+2. Ensure the required libraries are installed:
+- tensorflow
+- keras
+- scikit-learn
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- ucimlrepo
+3. Run all notebook cells from top to bottom.
+4. Ensure TensorFlow is properly installed before running.
+
+What the Notebook Does:
+- Imports required libraries.
+- Loads the Forest CoverType dataset using `ucimlrepo`.
+- Assigns feature names to the dataset.
+- Splits the dataset into train/validation/test sets: 70% training, 10% validation, 20% testing- Uses stratified splitting to preserve class proportions.
+- Applies feature scaling using `StandardScaler`.
+- Reshapes the tabular data into a format compatible with `Conv1D` layers.
+- One-hot encodes the target class labels.
+- Builds a 1D Convolutional Neural Network architecture using TensorFlow/Keras.
+- Trains the CNN model using:
+  * Adam optimizer
+  * categorical cross-entropy loss
+  * batch normalization
+  * dropout regularization
+  * early stopping
+- Tracks training and validation performance across epochs.
+- Evaluates the trained model on the test dataset.
+- Generates visualizations and evaluation metrics.
+
+Output:
+- Training and validation accuracy curves
+- Training and validation loss curves
+- Test accuracy and test loss
+- Precision, recall, and F1-score
+- Confusion matrix
+- Per-class metric visualizations
 
 ### Large Language Model (LLM)
 
