@@ -82,6 +82,32 @@ Output:
 - Confusion matrix
 - Hyperparameter tuning plot for var_smoothing
 
+### Linear Support Vector Machine
+How to Run:
+- Open LSVM.ipynb in Jupyter Notebook or VS Code (with the Jupyter extension installed)
+- Ensure required libraries are installed (scikit-learn, pandas, numpy, matplotlib)
+- Ensure the dataset path (covtype.data) is correct before running
+- Run all cells from top to bottom 
+
+What the Notebook Does:
+- Imports required libraries
+- Loads the Covertype dataset
+- Converts class labels from [1–7] to [0–6]
+- Splits data into train/validation/test sets (70/10/20, stratified)
+- Scales features using MaxAbsScaler
+- Generates polynomial interaction features (degree = 2)
+- Implements a custom One-vs-Rest LSVM using LinearSVC
+- Trains models using multiple values of the regularization parameter CCC
+- Evaluates model performance on training, validation, and test sets
+- Plots accuracy and F1-score versus different values of CCC 
+
+Outputs:
+- Accuracy (train, validation, test)
+- Precision, recall, and F1-score
+- Performance plots (Accuracy vs C, F1-score vs C)
+- Classification report for the final model 
+
+
 
 ## Deep Learning Models
 ### Multi-Layer Perceptrons
@@ -105,6 +131,34 @@ Outputs
 
 Note
 - A convergence warning may appear during training; this is expected and does not affect final results.
+
+### Long-Short Term Memory
+How to Run:
+- Open LSTM.ipynb in Jupyter Notebook or VS Code (with the Jupyter extension installed)
+- Ensure required libraries are installed (PyTorch, scikit-learn, pandas, numpy, matplotlib)
+- Ensure the dataset path (covtype.data) is correct before running
+- Run all cells from top to bottom
+
+What the Notebook Does:
+- Imports required libraries
+- Loads the Covertype dataset
+- Converts class labels from [1–7] to [0–6]
+- Splits data into train/validation/test sets (70/10/20, stratified)
+- Standardizes continuous features using StandardScaler
+- Reshapes input data into sequence format for LSTM (features treated as timesteps)
+- Creates PyTorch Dataset and DataLoader objects
+- Defines the LSTM model architecture (2 layers, hidden size = 64, dropout applied)
+- Computes class weights to address class imbalance
+- Trains the model using CrossEntropyLoss and Adam optimizer
+- Tracks training and validation accuracy and F1-score over epochs
+- Evaluates the final model on the test set
+- Generates confusion matrices and training performance plots
+
+Outputs:
+- Accuracy, precision, recall, and F1-score
+- Training and validation curves (loss, accuracy, F1-score)
+- Confusion matrices (train, validation, test)  
+
 
 ### Convolutional Neural Network
 How to Run:
